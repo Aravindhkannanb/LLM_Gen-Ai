@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Response</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      color: #333;
+    }
+    .query {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+    .papers {
+      margin: 20px 0;
+      list-style: none;
+      padding: 0;
+    }
+    .papers li {
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #f1f1f1;
+      border-radius: 5px;
+      border-left: 4px solid #007BFF;
+    }
+    .papers li h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+    .papers li p {
+      margin: 5px 0 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .response {
+      background: #eef7ff;
+      border-left: 4px solid #007BFF;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      color: #333;
+      line-height: 1.5;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .button-container a {
+      text-decoration: none;
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .button-container a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Query Response</h1>
+    </div>
+    <div class="query">
+      <strong>User Query:</strong> {{ user_query }}
+    </div>
+    <div>
+      <div class="section-title">Relevant Papers</div>
+      <ul class="papers">
+        {% for paper in papers %}
+        <li>
+          <h3>Title: {{ paper.title }}</h3>
+          <p><strong>Authors:</strong> {{ paper.authors }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="section-title">Response</div>
+      <div class="response">
+        {{ response }}
+      </div>
+    </div>
+    <div class="button-container">
+      <a href="/">Ask Another Query</a>
+    </div>
+  </div>
+</body>
+</html>
