@@ -109,17 +109,3 @@ Contributions are welcome! Please follow these steps:
 3. Commit changes (`git commit -m 'Add some feature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 🐛 Issues
-
-Report bugs or suggest features by opening a GitHub issue.
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 📬 Contact
-
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/yourusername/research-paper-query-assistant](https://github.com/yourusername/research-paper-query-assistant)
